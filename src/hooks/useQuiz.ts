@@ -8,6 +8,7 @@ interface Round {
   question: Language;
   answers: Language[];
 }
+
 interface UseQuizProps {
   languages: Language[];
   answersNumber: number;
