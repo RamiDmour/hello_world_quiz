@@ -16,6 +16,7 @@ export const GameView = ({ languages }: { languages: Language[] }) => {
     onFailSelect: _ => setTimeout(() => next(), 2000),
     onFinish: incorrectAnswers => modalRef.current?.showModal(incorrectAnswers),
   });
+
   const { colors } = useTheme();
   function checkStatus(
     answer: Language,

@@ -3,8 +3,10 @@ import { supabase } from './supabaseClient';
 
 const TABLE_NAME = 'ratings';
 class RatingsApi {
-  async getRatings(): Promise<Rating[]> {
-    const { data, error } = await supabase.from(TABLE_NAME).select();
+  async getRatings() {
+    const { data, error } = await supabase
+      .from(TABLE_NAME)
+      .select<string, Rating>();
 
     if (!data || error) {
       throw error;
